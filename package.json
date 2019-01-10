@@ -1,0 +1,26 @@
+{
+  "name": "pdf-to-studies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bcaldwell/pdf-to-studies.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bcaldwell/pdf-to-studies/issues"
+  },
+  "homepage": "https://github.com/bcaldwell/pdf-to-studies#readme",
+  "dependencies": {
+    "archiver": "^3.0.0",
+    "canvas": "^2.2.0",
+    "mkdirp": "^0.5.1",
+    "pdfjs-dist": "file:vendor/pdfjs-dist"
+  },
+  "devDependencies": {}
+}
