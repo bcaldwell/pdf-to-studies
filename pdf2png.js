@@ -159,16 +159,16 @@ Promise.all([loadingTask.promise, dirPromise]).then(async function(pdfDocument) 
     await convertPageToImages(dir, pdfDocument, i)
   }
 
-  // console.log("zipping")
-  // let csvFile = fs.createWriteStream(`${dir}/Data.csv`);
-  // csvFile.write("1 Text, 1 Image, 2 Text, 2 Image\n")
-  // for (i = 1; i <= pdfDocument.numPages; i++) {
-  //   csvFile.write(`,${i}_a.png,,${i}_b.png\n`)
-  // }
-  // csvFile.end()
-  //
-  // await zipDirectory(packageName, `${packageName}.studyarch`)
-  // console.log("Done")
+  console.log("zipping")
+  let csvFile = fs.createWriteStream(`${dir}/Data.csv`);
+  csvFile.write("1 Text, 1 Image, 2 Text, 2 Image\n")
+  for (i = 1; i <= pdfDocument.numPages; i++) {
+    csvFile.write(`,${i}_a.png,,${i}_b.png\n`)
+  }
+  csvFile.end()
+
+  await zipDirectory(packageName, `${packageName}.studyarch`)
+  console.log("Done")
 
 }).catch(function(reason) {
   console.log(reason);
